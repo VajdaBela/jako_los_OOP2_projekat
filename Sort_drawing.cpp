@@ -66,3 +66,9 @@ Sort_drawing::Sort_drawing(int w, int h, const string& title) :
 	end();
 	show();
 }
+
+Sort_drawing::~Sort_drawing()
+{
+	delete d;
+	delete sc;
+}

@@ -99,6 +99,7 @@ void QuickSort::quick_Sort(std::vector<Flight>& data, int begin, int end) {
 	//puts the first in place and calls itself for the partitions
 	if (begin >= end)
 		return;
+
 	vector<int> step(steps[0]);
 	auto comp_func = Flight::get_compare_function();
 	int pivot = begin;
@@ -137,10 +138,12 @@ void QuickSort::quick_Sort(std::vector<Flight>& data, int begin, int end) {
 		data[pivot] = temp;
 	}
 
+	++num_iter;
 	steps.push_back(step);
 	quick_Sort(data, next_begin,  end - 1);
 	quick_Sort(data, end + 1, next_end);
-	++num_iter;
+	
+
 }
 
 void QuickSort::sort(std::vector<Flight>& data) {

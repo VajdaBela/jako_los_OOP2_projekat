@@ -33,6 +33,7 @@ class Sort_drawing : public Fl_Window {
 public:
 
 	Sort_drawing(int w, int h, const string& title);
+	~Sort_drawing();
 	Drawing* d;
 	Fl_Scroll* sc;
 	vector<string> starting;
